@@ -1,0 +1,162 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 20vh 80vh;
+    margin: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#header {
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);;
+    align-items: center;
+    font-weight: bolder;
+}
+
+#header #search{
+    grid-row: 1;
+    grid-column: 1/3;
+    display: flex;
+}
+
+#header #user{
+    display: flex;
+    align-items: center;
+}
+
+#header #user,
+#header #btn{
+    grid-row: 2;
+}
+
+#header #btn{
+    grid-column: 15;
+}
+
+input {
+    width: 50vh;
+    height: 3vh;
+    border: none;
+    background-color: lightgray;
+    border-radius: 5vh;
+}
+
+#header svg {
+    height: 5.5vh;
+    vertical-align: bottom;
+}
+
+button{
+    border: none;
+    border-radius: 5vh;
+    height: 5vh;
+    width: 10vh;
+    color: whitesmoke;
+    background-color: #2dd4bf;
+}
+
+button:hover{
+    background-color: #0d9488;
+}
+
+#sidebar {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: #2dd4bf;
+    color: whitesmoke;
+    font-size: 2.5vh;
+    font-weight: bolder;
+    padding-left: 1vh;
+    grid-row: 1;
+    height: 100vh;
+    width: 24vw;
+}
+
+#sidebar #logo{
+    padding-top: 3vh;
+}
+
+#sidebar #navigation{
+    padding-bottom: 40vh;
+}
+
+#sidebar #branding{
+    padding-bottom: 2vh;
+}
+
+#sidebar svg {
+    height: 4vh;
+    vertical-align: bottom;
+}
+
+#right-corner{
+    position: absolute;
+    right: 1vh;
+}
+
+#content {
+    padding-left: 1vh;
+    display: grid;
+    grid-row: 2;
+    grid-column: 2;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    background-color: lightgrey;
+    gap: 1vh;
+    height: fit-content;
+}
+
+#containers{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vh;
+    justify-content: space-evenly;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#projects{
+    grid-row: span 2;
+}
+
+#projects h3{
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.container{
+    background-color: whitesmoke;
+    padding: 2vh;
+    border-radius: 1.5vh;
+    max-width: 40vh;
+}
+
+#content #announcements{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#content #trending{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#announcements,
+#trending{
+    grid-column: 1;
+    width: 100%;
+}
+
+#announcements .container,
+#trending .container{
+    font-size: small;
+    max-height: fit-content;
+    max-width: 85%;
+}
